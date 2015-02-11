@@ -1,0 +1,1080 @@
+/*! Made with Bones: http://themble.com/bones :) */
+/******************************************************************
+Site Name:
+Author: Susanna Lindskog
+
+Stylesheet: Main Stylesheet
+
+
+******************************************************************/
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+/* normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+
+html {
+	
+	font-family: sans-serif;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	
+	letter-spacing: 1px;
+}
+
+	
+
+/**
+ * Remove default margin.
+
+body {
+  margin: 0; }
+ */
+ 
+/*
+---------- General -------------
+*/
+
+ /* Common margin & padding for all browsers */
+html, body { 
+    margin:0;
+    padding:0;
+}
+
+html, body, #container {
+	height:100%; // for section to be 100%
+}
+
+html { 
+    overflow-y:scroll; /* Always display the scrollbar, avoid flipping pages */
+    /* background:#FFFFFF; Background color for whole browser window */ /* COULDN'T ADD THIS --> the colored square on music dissapeared*/
+}
+
+body{
+	padding-top:70px;
+}
+
+#content {
+	padding-top:120px;
+	padding-bottom:120px;
+	text-align: center;
+}
+
+/************** ** LINKS ** ***************/
+a {
+	outline:0 none;
+	color:#000;
+}
+
+a:hover {
+	color:#FFF;
+	background-color:black; 
+}
+
+
+/************** ** NAVBAR ** ***************/
+
+.navbar-default {
+	background-color:#FFF; 
+	height:70px;
+	opacity: 0.7;
+}
+.navbar-brand {
+	padding:0px;
+}
+
+.navbar-brand > img{
+	height:65px;
+}
+
+#menu-primary {
+	padding-top:25px;
+	padding-bottom:20px;
+	float:right;
+}
+
+#menu-primary > li{
+	display:inline;
+
+}
+
+#menu-primary > li > a{
+	display:inline;
+	outline:0 none;
+}
+
+#menu-primary > li > a:visited {
+	color:#000000;
+}
+
+#menu-primary > li > a:hover {
+	color:#ff3232;
+	background:transparent;
+}
+
+#menu-primary > li > a:active {
+	color:#ff3232;
+	background:transparent;
+}
+
+#button-collapsed {
+	margin-top:15px;
+	border:0px;
+}
+
+#button-collapsed:hover {
+	background:transparent;
+	opacity: 0.6;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #000;
+  height:3px;
+}
+
+
+	
+	
+/* The collapse breakpoint */
+@media screen and (max-width:767px) {
+     
+
+    .navbar-header {
+        float: none;
+    }
+    
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+		display: block;
+    }
+    
+    .navbar-nav>li {
+        text-align:center;
+        margin:0;
+        height:45px; 
+    }
+	
+	#menu-primary {
+		text-align: center;
+		width:100%;
+	}
+	
+	#menu-primary > li {
+		display:block;
+		padding-top: 10px;
+        padding-bottom: 10px;
+	}
+    
+    #menu-primary > li > a {
+
+		font-size: 120%;
+    }
+    
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    
+    .collapsing {
+        overflow: hidden!important;
+    }
+    
+
+    .navbar-default {
+        opacity:1;
+        margin-top:0px;
+        height:auto;
+		padding-bottom: 20px;
+    }
+	
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+		border-color: #e7e7e7;
+		margin-top:20px;
+	}	
+
+}
+
+/**************** * OTHER * *************/
+.col {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+/************** * PRESS ARCHIVE * ***************/
+
+
+#wrapper-press {
+	text-align:center;
+	padding-bottom: 100px;
+	padding-top: 60px;
+	
+}
+
+#wrapper-single-press {
+	text-align:center;
+	padding-bottom: 100px;
+	padding-top: 60px;
+}
+
+
+#press-h1 {
+	margin-bottom: 50px;
+	letter-spacing: 1px;
+}
+
+.press-h3 {
+	margin-bottom:30px;
+	color:#999999;
+}
+
+.press-day {
+	color:#999999;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding-top:10px;
+	font-size:smaller;
+	
+}
+
+.press-date {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.press-from {
+	padding:0px;
+	padding-top:12px;
+	//margin:0px;
+	color:#999999;
+	font-weight: bold;
+	font-size: smaller;
+}
+
+.press-to {
+	padding:0px;
+	//margin:0px;
+	color:#999999;
+	font-weight: bold;
+	font-size: smaller;
+}
+
+.press-title-link {
+
+	
+}
+
+.press-title-link:hover {
+	text-decoration: line-through;
+	background-color:transparent;
+	color:#000;
+}
+
+.press-title-link:visited {
+	color:#000;
+}
+
+.press-title-link:active {
+	color:#000;
+}
+
+.press-title {
+	text-align: left;
+	text-transform: uppercase;
+}
+
+
+
+.press-desc {
+	margin-bottom:80px;
+	letter-spacing: 1px;
+	text-justify: inter-word;
+	text-align: justify;
+}
+
+.press-single-desc {
+	letter-spacing: 2px;
+	text-justify: inter-word;
+	text-align: justify;
+	font-size: 150%;
+	padding-bottom:50px;
+}
+
+.press-single-h1 {
+	text-align:center;
+	padding-top:100px;
+	
+}
+
+.press-single-img {
+	margin:0 auto;
+}
+
+.press-archive-img {
+	//max-width: 630px;
+	max-height:500px;
+	margin: 0 auto;
+}
+
+.press-single-img-div {
+	text-align: center;
+}
+
+.press-ul-info {
+	list-style: none;
+	text-align:center;
+	padding-left:0px;
+	
+}
+
+.press-ul-info > li {
+	display:inline-block;
+}
+
+.press-ul {
+	list-style: none;
+	text-align:center;
+	padding-left:0px;
+}
+
+.press-ul > li {
+	margin-bottom:50px;
+	display:inline-block;
+}
+
+.links-h {
+	text-align: center;
+	padding-top:40px;
+	padding-bottom:30px;
+}
+
+.press-link {
+	padding:15px 15px;
+	letter-spacing: 1px;
+	border: 2px #000 solid;
+	text-decoration: none;
+	
+}
+
+.press-link:visited {
+	color:#000;
+	text-decoration: none;
+}
+
+.press-link:hover {
+	text-decoration:none;
+	background-color: #000;
+	color:#FFF;	
+}
+
+.press-link:active {
+	color:#000;
+	text-decoration: none;
+}
+
+
+/***************** * Events page * *************************/
+
+/* To center the slide show*/
+.fotorama__wrap { 
+	margin: auto; 
+	margin-bottom: 40px;
+	margin-top:40px;
+}
+
+#wrapper-event {
+	text-align:center;
+	padding-bottom: 100px;
+	padding-top: 60px;
+	
+}
+
+#wrapper-single-event {
+	text-align:center;
+	padding-bottom: 100px;
+	padding-top: 60px;
+}
+
+.event-title {
+	margin-top:60px;
+	margin-bottom:50px;
+	text-transform: uppercase;	
+}
+
+.event-date {
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.event-desc {
+	margin-bottom:100px;
+	letter-spacing: 1px;
+	text-justify: inter-word;
+	text-align: justify;
+}
+
+.event-day {
+	color:#999999;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: smaller;
+}
+
+
+.event-title-link {
+	padding:15px 15px;
+	letter-spacing: 1px;
+	border: 2px #000 solid;
+	
+}
+
+.event-title-link:visited {
+	color:#000;
+	text-decoration: none;
+}
+
+.event-title-link:hover {
+	text-decoration:none;
+	background-color: #000;
+	color:#FFF;	
+}
+
+.event-title-link:active {
+	color:#000;
+	text-decoration: none;
+}
+
+
+.single-event-center {
+	text-align: center;
+}
+
+.event-single-ul, .event-single-ul-2 {
+	list-style: none;
+	padding-left:0px;
+	text-align: center;
+}
+
+.event-single-ul-2 > li {
+	display:inline-block;
+}
+
+
+.event-single-ul > li > p, .event-single-ul-2 > li > p {
+	padding-bottom:0px;
+}
+
+
+.event-single-ul-2 {
+	padding-bottom:50px;
+}
+
+.event-single-desc {
+	letter-spacing: 2px;
+	text-justify: inter-word;
+	text-align: justify;
+	font-size: 150%;
+	
+
+}
+
+.event-single-h1 {
+	text-align:center;
+	font-size: 70px;
+	margin-bottom:10px;
+	margin-top:10px;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.event-single-img {
+	margin:0 auto;
+	padding-bottom:60px;
+}
+
+.event-single-clients {
+	text-align:center;
+	color:#999999;
+	padding-bottom: 10px;
+	font-size:70%;
+	text-transform: uppercase;
+}
+
+.event-single-category {
+	text-align:center;
+	color:#999999;
+	padding-bottom: 10px;
+	font-size:70%;
+	text-transform: uppercase;
+}
+
+.event-single-date {
+	text-align:center;
+	color:#999999;
+	padding-bottom: 20px;
+	font-size:70%;
+}
+
+.event-single-location {
+	text-align:center;
+	color:#999999;
+	padding-bottom: 10px;
+	font-size:70%;
+	text-transform: uppercase;	
+}
+
+.event-single-press-link {
+	text-align: center;
+	padding:20px 40px;
+	border: 2px #000 solid;
+}
+
+.event-single-press-link:hover {
+	text-decoration: none;
+}
+
+.event-single-press-link:active,  .event-single-press-link:visited{
+	color:#000;
+	text-decoration: none;
+}
+
+.ajax-load-more-wrap.white button.alm-load-more-btn {
+	border:2px #999999 solid;
+	color:#999999;
+}
+
+
+.ajax-load-more-wrap.white button.alm-load-more-btn:hover {
+	color:#fff;
+	background-color: #999999;
+}
+
+
+
+
+
+
+/***************** * Newsletter page * *********************/
+.newsletter-form-div {
+	padding:0px 0px 40px 0px;
+	text-align: center;
+	background-color: #BAB9B8;
+	color:#FFF;
+	letter-spacing: 1px;
+}
+
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"]
+{
+    background-color: #BAB9B8;
+	text-align: center;
+    width: 50%;
+	height:40px;
+	border:none;
+	outline: 3px #FFF solid;
+	margin-top:30px;
+	letter-spacing: 1px;
+}
+
+.wpcf7 input[type="checkbox"] {
+	margin-top:30px;
+	color: #00B2EE;
+}
+
+#acceptance-text {
+	color:#BBFFFF;
+}
+
+.wpcf7 input[type=submit] {
+	color:#FFF;
+	background-color: #BAB9B8;
+	box-shadow: 0;
+	border: 3px solid #FFF;
+	height:40px;
+	width:80px;
+	margin-top:30px;
+	letter-spacing: 1px;
+}
+
+.wpcf7 input[type=submit]:hover {
+	color:#BAB9B8;
+	background-color: #FFF;
+}
+
+/* Error messages, validation */
+div.wpcf7-validation-errors {
+    border: 2px solid darkred;
+}
+
+span.wpcf7-not-valid-tip {
+	color:#000;
+	padding-top:10px;
+}
+
+div.wpcf7-response-output {
+	border: none;
+	color:darkred;
+}
+
+
+
+/************* * Contact page * ***************/
+
+.contact-wrap {
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.contact-h {
+	padding-bottom:40px;
+}
+
+.talk {
+	padding-bottom:60px;
+}
+
+
+
+.contact-social {
+	padding-top:80px;
+	padding-bottom: 20px;
+}
+
+.contact-info {
+	border: 3px #000 solid;
+
+}
+
+.contact-text {
+	padding:40px 0px 40px 0px;
+}
+
+.contact-footer {
+	padding:20px;
+}
+
+.contact-footer > li > a {
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:20px;
+	padding-bottom: 20px;
+}
+
+
+.contact-footer > li > a:hover {
+	border:2px #999999 solid;	
+	background-color: #fff;
+}
+
+.contact-send-mail {
+	color:#000;
+	box-shadow: 0;
+	border: 3px solid #000;
+	height:40px;
+	width:80px;
+	margin-top:30px;
+	letter-spacing: 1px;
+	padding:20px 55px 20px 55px;
+	
+}
+
+.contact-send-mail:hover {
+	text-decoration: none;
+	background-color: #000;
+}
+
+/* Flexible iFrame */
+
+.Flexible-container {
+	//margin-top:50px;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+	//border: 3px #000 solid;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---------- footer ------------- */
+
+.footer {
+	background-color: #000;
+	color:#fff;
+	padding: 30px 20px 30px 20px;
+}
+
+.footer-ul {
+	list-style: none;
+	display:inline;
+}
+
+
+.footer-ul > li {
+	display:inline;
+}
+
+.footer a {
+	padding: 10px 10px;
+	color:#fff;
+	height:60px;
+	line-height: 60px;
+}
+
+.footer a:hover{
+	color:#000;
+	background-color:#999999;
+	text-decoration: none;
+}
+
+.social-media {
+	padding:10px 0px;
+}
+
+
+.copyright {
+	padding-left:10px;
+	font-size: 12px;
+	color:#BAB9B8;
+}
+
+.footer-right {
+	float:right;
+}
+
+
+
+/*************** * Section * *****************/
+section {
+	min-height: 100%; /* min. height for modern browser */
+    height:auto !important; /* important rule for modern Browser */
+    height:100%; /* min. height for IE */
+    overflow: hidden !important; /* FF scroll-bar */
+	
+}
+
+#bg-about-pic {
+	background: url("../eventi/giorgio_armani/2.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-about-1 {
+	
+}
+
+#bg-about-2 {
+	background-color: #000;
+	color:#FFF;
+}
+
+#bg-about-3 {
+	
+}
+
+#bg-contact {
+		
+	background: url("../eventi/sky_arte_codalunga/domus-04.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-newsletter {
+	background: url("../eventi/sky_arte_codalunga/codalunga.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-clients {
+	background: url("../eventi/sky_arte_codalunga/Vascellari_Stiller.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-events {
+	background: url("../eventi/giorgio_armani/1.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-press {
+	background: url("../eventi/ballroom/2.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#bg-home {
+	background: url("../eventi/sky_arte_codalunga/codalunga.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;	
+}
+
+#bg-home2 {
+	background-color: #fff;	
+}
+
+#bg-home3 {
+	background-color: #fff;	
+}
+
+
+/***************** * Clients * **********************/
+
+.clients-ul {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.clients-ul > li {
+	display:inline-block;
+	height:auto;
+	margin:0 auto;
+	
+}
+
+.col-clients {
+
+}
+
+/*************************** ABOUT ***************************/
+
+.about-h1 {
+	padding-top:20px;
+	font-size:70px;
+	letter-spacing: 1px;
+}
+
+.about-p {
+	padding-top:20px;
+	padding-bottom:60px;
+	font-size:30px;
+	letter-spacing: 1px;
+	text-justify: inter-word;
+	text-align: justify;
+}
+
+.about-ul {
+	padding-left:0px;
+	list-style:none;
+	letter-spacing: 1px;
+
+}
+
+.about-ul > li {
+	padding-top:5px;
+	padding-left:0px;
+	list-style:none;
+	font-size:30px;
+	letter-spacing: 1px;
+	text-justify: inter-word;
+	text-align: justify;
+}
+
+.about-ul > li:last-child {
+	padding-bottom:60px;
+}
+
+.about-ul > li:first-child {
+	padding-top:20px;
+}
+
+
+
+@media screen and (max-width:767px) {
+	
+	.footer-right {
+		float:none;
+	}
+	
+	
+	.contact-send-mail {
+		padding: 20px;
+	}
+	
+	.contact-text {
+		padding: 30px 0px 10px 0px;
+	}
+	
+	.contact-h {
+		padding-bottom:10px;
+	}
+
+	
+	.talk {
+		padding-bottom:20px;
+		margin-bottom:20px;
+	}
+	
+	.visit {
+		padding-top:50px;
+	}
+	
+	.footer a {
+		float:none;
+	}
+
+	
+	.footer-ul {
+		padding-left:0px;
+		padding-right:0px;
+	}
+	
+	.contact-footer {
+		padding-left:10px;
+		padding-right:10px;
+	}
+	
+	.clients-img {
+		height:100px;
+	}
+	
+	.event-desc {
+		margin-bottom: 70px;
+	}
+	
+	.event-single-h1 {
+		font-size: 140%;
+		padding-bottom:0px;
+	}
+	
+	.event-single-desc {
+		font-size: 90%;
+	}
+	
+	.event-single-category {
+		font-size: 90%;
+	}
+	
+	.event-single-clients {
+		font-size: 90%;
+	}
+	
+	.event-single-date {
+		font-size: 90%;
+	}
+	
+	.event-single-location {
+		font-size: 90%;
+	}
+	
+	.links-h{
+		font-size: 100%;
+	}
+	
+	#content {
+		padding-bottom:100px;
+		padding-top:100px;
+	}
+	
+	.contact-wrap {
+		padding-bottom:50px;
+		
+	}
+	
+	.about-h1 {
+		font-size: 150%;
+	}
+	
+	.about-p {
+		font-size: 100%;
+	}
+	
+	.about-ul > li {
+		font-size: 100%;
+	}
+}
+
